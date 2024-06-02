@@ -1,5 +1,6 @@
 package com.borajunto.projetobora.entidade;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,6 +18,7 @@ import lombok.Setter;
 public class Passageiro extends Usuario{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Column(name = "idpassageiro")
+    private int idPassageiro;
     
 }
