@@ -7,23 +7,9 @@ import com.borajunto.projetobora.dto.UsuarioDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.Setter;
 
-//Anotações do Spring Boot. 
-
-//Dizendo pro spring que isso se trata de uma entidade
 @Entity
-
-//Estamos mapeando nossa classe, dizendo pro Spring que essa entidade vai ter uma tabela chamada bjt_usuario no banco de dados
 @Table(name = "BJT_USUARIO")
-
-//Importamos o lombok, assim podemos fazer a anotação de getters e setters, não sendo mais necessário criar todos os métodos à mão. Pois toda vez que instanciarmos um objeto teremos os métodos get e set prontos
-@Getter
-@Setter
-
-
-//CAMADA ENTITY(ENTIDADE). Aqui (no pacote entidade) criamos as principais entidades do nosso sistema, por ex: Entidade Usuário, Entidade Caronas, etc..
 public class Usuario {
 
     @Id
@@ -37,7 +23,8 @@ public class Usuario {
     private String telefone;
     private String sexo;
 
-    public Usuario() {}
+    public Usuario() {
+    }
 
     public Usuario(UsuarioDTO usuarioDTO) {
         this.cpf = usuarioDTO.getCpf();
@@ -51,6 +38,78 @@ public class Usuario {
         this.sexo = usuarioDTO.getSexo();
     }
 
+    // Getters and Setters
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getRA() {
+        return rA;
+    }
+
+    public void setRA(String rA) {
+        this.rA = rA;
+    }
+
+    public String getUniversidade() {
+        return universidade;
+    }
+
+    public void setUniversidade(String universidade) {
+        this.universidade = universidade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
 
     @Override
     public int hashCode() {

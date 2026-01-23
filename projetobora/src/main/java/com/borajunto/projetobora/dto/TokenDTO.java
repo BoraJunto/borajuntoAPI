@@ -1,19 +1,39 @@
 package com.borajunto.projetobora.dto;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public class TokenDTO {
     private String token;
     private String type = "Bearer";
     private Long expiresIn;
 
-    public TokenDTO() {}
+    public TokenDTO() {
+    }
 
     public TokenDTO(String token, Long expiresIn) {
         this.token = token;
+        this.expiresIn = expiresIn;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Long getExpiresIn() {
+        return expiresIn;
+    }
+
+    public void setExpiresIn(Long expiresIn) {
         this.expiresIn = expiresIn;
     }
 }

@@ -39,7 +39,7 @@ public class CaronaService {
     }
 
     public List<CaronaDTO> buscarPorMotorista(String cpfMotorista) {
-        List<Carona> caronas = caronaRepository.findByMotoristaId(cpfMotorista);
+        List<Carona> caronas = caronaRepository.findByMotoristaCpf(cpfMotorista);
         return caronas.stream().map(CaronaDTO::new).toList();
     }
 

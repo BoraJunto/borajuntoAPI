@@ -3,13 +3,9 @@ package com.borajunto.projetobora.entidade;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 @Table(name = "BJT_PASSAGEIRO")
-@Getter
-@Setter
 public class Passageiro {
 
     @Id
@@ -47,5 +43,62 @@ public class Passageiro {
         this.usuario = usuario;
         this.dataRequisicao = LocalDateTime.now();
         this.status = StatusPassageiro.PENDENTE;
+    }
+
+    // Getters and Setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Carona getCarona() {
+        return carona;
+    }
+
+    public void setCarona(Carona carona) {
+        this.carona = carona;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public StatusPassageiro getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusPassageiro status) {
+        this.status = status;
+    }
+
+    public LocalDateTime getDataRequisicao() {
+        return dataRequisicao;
+    }
+
+    public void setDataRequisicao(LocalDateTime dataRequisicao) {
+        this.dataRequisicao = dataRequisicao;
+    }
+
+    public LocalDateTime getDataAprovacao() {
+        return dataAprovacao;
+    }
+
+    public void setDataAprovacao(LocalDateTime dataAprovacao) {
+        this.dataAprovacao = dataAprovacao;
+    }
+
+    public String getObservacoes() {
+        return observacoes;
+    }
+
+    public void setObservacoes(String observacoes) {
+        this.observacoes = observacoes;
     }
 }

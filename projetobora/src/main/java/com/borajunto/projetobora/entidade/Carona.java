@@ -4,13 +4,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 @Table(name = "BJT_CARONA")
-@Getter
-@Setter
 public class Carona {
 
     @Id
@@ -71,5 +67,110 @@ public class Carona {
         this.valor = valor;
         this.dataCriacao = LocalDateTime.now();
         this.status = StatusCarona.ATIVA;
+    }
+
+    // Getters and Setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Usuario getMotorista() {
+        return motorista;
+    }
+
+    public void setMotorista(Usuario motorista) {
+        this.motorista = motorista;
+    }
+
+    public String getOrigem() {
+        return origem;
+    }
+
+    public void setOrigem(String origem) {
+        this.origem = origem;
+    }
+
+    public String getDestino() {
+        return destino;
+    }
+
+    public void setDestino(String destino) {
+        this.destino = destino;
+    }
+
+    public LocalDateTime getDataHoraSaida() {
+        return dataHoraSaida;
+    }
+
+    public void setDataHoraSaida(LocalDateTime dataHoraSaida) {
+        this.dataHoraSaida = dataHoraSaida;
+    }
+
+    public Integer getVagas() {
+        return vagas;
+    }
+
+    public void setVagas(Integer vagas) {
+        this.vagas = vagas;
+    }
+
+    public Integer getVagasDisponiveis() {
+        return vagasDisponiveis;
+    }
+
+    public void setVagasDisponiveis(Integer vagasDisponiveis) {
+        this.vagasDisponiveis = vagasDisponiveis;
+    }
+
+    public Double getValor() {
+        return valor;
+    }
+
+    public void setValor(Double valor) {
+        this.valor = valor;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public StatusCarona getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusCarona status) {
+        this.status = status;
+    }
+
+    public LocalDateTime getDataCriacao() {
+        return dataCriacao;
+    }
+
+    public void setDataCriacao(LocalDateTime dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
+    public LocalDateTime getDataAtualizacao() {
+        return dataAtualizacao;
+    }
+
+    public void setDataAtualizacao(LocalDateTime dataAtualizacao) {
+        this.dataAtualizacao = dataAtualizacao;
+    }
+
+    public List<Passageiro> getPassageiros() {
+        return passageiros;
+    }
+
+    public void setPassageiros(List<Passageiro> passageiros) {
+        this.passageiros = passageiros;
     }
 }

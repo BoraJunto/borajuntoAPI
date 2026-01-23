@@ -3,13 +3,9 @@ package com.borajunto.projetobora.entidade;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 @Table(name = "BJT_AVALIACAO")
-@Getter
-@Setter
 public class Avaliacao {
 
     @Id
@@ -48,5 +44,62 @@ public class Avaliacao {
         this.nota = nota;
         this.comentario = comentario;
         this.dataAvaliacao = LocalDateTime.now();
+    }
+
+    // Getters and Setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Carona getCarona() {
+        return carona;
+    }
+
+    public void setCarona(Carona carona) {
+        this.carona = carona;
+    }
+
+    public Usuario getAvaliador() {
+        return avaliador;
+    }
+
+    public void setAvaliador(Usuario avaliador) {
+        this.avaliador = avaliador;
+    }
+
+    public Usuario getAvaliado() {
+        return avaliado;
+    }
+
+    public void setAvaliado(Usuario avaliado) {
+        this.avaliado = avaliado;
+    }
+
+    public Integer getNota() {
+        return nota;
+    }
+
+    public void setNota(Integer nota) {
+        this.nota = nota;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
+
+    public LocalDateTime getDataAvaliacao() {
+        return dataAvaliacao;
+    }
+
+    public void setDataAvaliacao(LocalDateTime dataAvaliacao) {
+        this.dataAvaliacao = dataAvaliacao;
     }
 }

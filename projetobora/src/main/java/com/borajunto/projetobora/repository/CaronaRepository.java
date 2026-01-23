@@ -20,7 +20,7 @@ public interface CaronaRepository extends JpaRepository<Carona, Long> {
     
     List<Carona> findByStatus(StatusCarona status);
     
-    List<Carona> findByMotoristaId(String cpfMotorista);
+    List<Carona> findByMotoristaCpf(String cpfMotorista);
     
     @Query("SELECT c FROM Carona c WHERE c.origem = :origem AND c.destino = :destino AND c.status = :status")
     List<Carona> buscarPorOrigemDestinoStatus(@Param("origem") String origem, 

@@ -2,11 +2,6 @@ package com.borajunto.projetobora.dto;
 
 import com.borajunto.projetobora.entidade.Usuario;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public class UsuarioDTO {
     private String cpf;
     private String rA;
@@ -33,7 +28,7 @@ public class UsuarioDTO {
         this.sexo = usuarioDTO.getSexo();
     }
 
-    public UsuarioDTO(Usuario usuario){
+    public UsuarioDTO(Usuario usuario) {
         this.cpf = usuario.getCpf();
         this.rA = usuario.getRA();
         this.universidade = usuario.getUniversidade();
@@ -44,6 +39,76 @@ public class UsuarioDTO {
         this.telefone = usuario.getTelefone();
         this.sexo = usuario.getSexo();
     }
-    
 
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getRA() {
+        return rA;
+    }
+
+    public void setRA(String rA) {
+        this.rA = rA;
+    }
+
+    public String getUniversidade() {
+        return universidade;
+    }
+
+    public void setUniversidade(String universidade) {
+        this.universidade = universidade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
 }

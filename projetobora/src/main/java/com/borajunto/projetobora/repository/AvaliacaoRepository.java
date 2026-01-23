@@ -16,8 +16,6 @@ public interface AvaliacaoRepository extends JpaRepository<Avaliacao, Long> {
     
     List<Avaliacao> findByAvaliadorCpf(String cpfAvaliador);
     
-    List<Avaliacao> findByAvaliadorCpf(String cpfAvaliado);
-    
     @Query("SELECT AVG(a.nota) FROM Avaliacao a WHERE a.avaliado.cpf = :cpf")
     Double buscarMediaAvaliacoes(@Param("cpf") String cpf);
     
